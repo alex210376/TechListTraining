@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [LoginTests]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="login chrome(failed)" verbose="0">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="techList.test.LoginTest">
+        <methods>
+          <include name="testSort"/>
+          <include name="setUp"/>
+          <include name="Down"/>
+        </methods>
+      </class> <!-- techList.test.LoginTest -->
+    </classes>
+  </test> <!-- login chrome(failed) -->
+  <test thread-count="5" name="login firefox(failed)" verbose="0">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="techList.test.LoginTest">
+        <methods>
+          <include name="testSort"/>
+          <include name="setUp"/>
+          <include name="Down"/>
+        </methods>
+      </class> <!-- techList.test.LoginTest -->
+    </classes>
+  </test> <!-- login firefox(failed) -->
+  <test thread-count="5" name="login opera(failed)" verbose="0">
+    <parameter name="browser" value="opera"/>
+    <classes>
+      <class name="techList.test.LoginTest">
+        <methods>
+          <include name="testSort"/>
+          <include name="setUp"/>
+          <include name="Down"/>
+        </methods>
+      </class> <!-- techList.test.LoginTest -->
+    </classes>
+  </test> <!-- login opera(failed) -->
+</suite> <!-- Failed suite [LoginTests] -->

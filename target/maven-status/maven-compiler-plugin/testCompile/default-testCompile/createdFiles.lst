@@ -1,0 +1,6 @@
+techList\test\CommonTestWithoutPage.class
+techList\page\LoginPage.class
+techList\page\ContentProvider.class
+techList\core\BasePage.class
+techList\core\BaseTest.class
+techList\page\Dashboard.class
