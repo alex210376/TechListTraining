@@ -7,7 +7,7 @@ import techList.core.BasePage;
 
 public class Dashboard extends BasePage {
 
-    @FindBy(xpath = "//a[@href ='/dict/providers']")
+    @FindBy(xpath = "//a[text() ='Контент-провайдеры']")
     private WebElement clickContentProvider;
 
     public Dashboard(WebDriver driver) {

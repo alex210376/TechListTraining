@@ -11,39 +11,41 @@ import java.util.List;
 
 public class ContentProvider extends BasePage {
 
-    @FindBy(css = "[name=\"entTable_length\"]")
+    @FindBy(xpath = "//select[@name='entTable_length']")
     private WebElement tableLength;
 
-    @FindBy(css = "body > div > section > div.container-fluid > header > div:nth-child(1) > span")
+    @FindBy(xpath = "//span[text()='Контент-провайдеры']")
     private WebElement pageName;
 
-    @FindBy(xpath = "//*[@id=\"entTable\"]/thead/tr/th[1]")
+    @FindBy(xpath = "//th[text()='#']")
     private WebElement clickNElement;
 
-    @FindBy(xpath = "//*[@id=\"entTable\"]/thead/tr/th[2]")
+    @FindBy(xpath = "//th[text()='ID']")
     private WebElement clickIDElement;
 
-    @FindBy(xpath = "//*[@id=\"entTable\"]/thead/tr/th[3]")
+    @FindBy(xpath = "//th[text()='Статус']")
     private WebElement clickStatusElement;
 
-    @FindBy(xpath = "//*[@id=\"entTable\"]/thead/tr/th[4]")
+    @FindBy(xpath = "//th[text()='Наименование']")
     private WebElement clickNameElement;
 
-    @FindBy(xpath = "//*[@id=\"entTable\"]/thead/tr/th[5]")
+    @FindBy(xpath = "//th[text()='БИН']")
     private WebElement clickBINElement;
 
-    @FindBy(xpath = "//*[@id=\"entTable\"]/tbody/tr[1]/td[6]/a[1]/i")
+    @FindBy(xpath = "//*[@id='entTable']/tbody/tr[1]/td[6]/a[1]/i")
     private WebElement clickEdit;
 
-    @FindBy(xpath = "//*[@id=\"entTable\"]/tbody/tr[1]/td[6]/a[2]/i")
+    @FindBy(xpath = "//*[@id='entTable']/tbody/tr[1]/td[6]/a[2]/i")
     private WebElement clickDelete;
 
-    @FindBy(xpath = "//*[@id=\"del\"]/button")
+    @FindBy(xpath = "//button[text()='Удалить']")
     private WebElement clickConfirmDelete;
 
-    @FindBy(xpath = "//*[@id=\"entTable_info\"]")
+    @FindBy(xpath = "//*[@id='entTable_info']")
     private WebElement infoLine;
 
+    @FindBy(xpath = "//a[text()=' Добавить']")
+    private WebElement clickAdd;
 
 
     public ContentProvider(WebDriver driver) {
@@ -115,6 +117,13 @@ public class ContentProvider extends BasePage {
         clickConfirmDelete.click();
         return this;
     }
+
+    //Клик по по кнопке "Добавить"
+    public ContentProviderAdd clickAddButton(){
+        clickAdd.click();
+        return new ContentProviderAdd(driver);
+    }
+
 
     //Чтение информации о количестве записей
     public String getInfo(){

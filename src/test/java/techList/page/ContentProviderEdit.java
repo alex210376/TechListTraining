@@ -7,22 +7,22 @@ import techList.core.BasePage;
 
 public class ContentProviderEdit extends BasePage {
 
-    @FindBy(xpath = "/html/body/div/div/div/div/div/form/div[2]/div[1]/div[1]/label")
+    @FindBy(xpath = "//label[@for='name']")
     private WebElement fieldName;
 
-    @FindBy(xpath = "/html/body/div/div/div/div/div/form/div[2]/div[1]/div[2]/label")
+    @FindBy(xpath = "//label[@for='status']")
     private WebElement fieldStatus;
 
-    @FindBy(xpath = "/html/body/div/div/div/div/div/form/div[2]/div[2]/div[1]/label")
+    @FindBy(xpath = "//label[@for='email']")
     private WebElement fieldBIN;
 
-    @FindBy(xpath = "/html/body/div/div/div/div/div/form/div[2]/div[2]/div[2]/label")
+    @FindBy(xpath = "//label[@for='active_from']")
     private WebElement fieldDateFrom;
 
-    @FindBy(xpath = "/html/body/div/div/div/div/div/form/div[2]/div[2]/div[3]/label")
+    @FindBy(xpath = "//label[@for='active_to']")
     private WebElement fieldDateTo;
 
-    @FindBy(xpath = "/html/body/div/div/div/div/div/form/div[2]/label")
+    @FindBy(xpath = "//label[@for='comment']")
     private WebElement fieldComment;
 
     public ContentProviderEdit(WebDriver driver) {
