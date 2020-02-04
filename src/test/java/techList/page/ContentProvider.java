@@ -26,11 +26,20 @@ public class ContentProvider extends BasePage {
     @FindBy(xpath = "//th[text()='Статус']")
     private WebElement clickStatusElement;
 
+    @FindBy(xpath = "//*[@id='entTable']/tbody/tr[1]/td[3]/div")
+    private WebElement Status;
+
     @FindBy(xpath = "//th[text()='Наименование']")
     private WebElement clickNameElement;
 
+    @FindBy(xpath = "//*[@id='entTable']/tbody/tr[1]/td[4]")
+    private WebElement Name;
+
     @FindBy(xpath = "//th[text()='БИН']")
     private WebElement clickBINElement;
+
+    @FindBy(xpath = "//*[@id='entTable']/tbody/tr[1]/td[5]")
+    private WebElement BIN;
 
     @FindBy(xpath = "//*[@id='entTable']/tbody/tr[1]/td[6]/a[1]/i")
     private WebElement clickEdit;
@@ -46,6 +55,12 @@ public class ContentProvider extends BasePage {
 
     @FindBy(xpath = "//a[text()=' Добавить']")
     private WebElement clickAdd;
+
+    @FindBy(xpath = "//span[text()='Logout']")
+    private WebElement clickLogout;
+
+    @FindBy(xpath = "//td[@class='sorting_1']")
+    private List<WebElement> allIdOnPage;
 
 
     public ContentProvider(WebDriver driver) {
@@ -66,7 +81,7 @@ public class ContentProvider extends BasePage {
 
     //Запись в коллекцию всех отображаемых строк
     public List<WebElement> selectLines(){
-        List<WebElement> elements = driver.findElements (By.xpath("//*[@id=\"entTable\"]/tbody/tr"));
+        List<WebElement> elements = driver.findElements (By.xpath("//td[@class='sorting_1']"));
         return elements;
     }
 
@@ -129,5 +144,35 @@ public class ContentProvider extends BasePage {
     public String getInfo(){
         return infoLine.getText().trim();
     }
+
+    //Получение имени контент-провайдера
+    public String getName(){
+        return Name.getText().trim();
+    }
+
+    //Получение статуса контент-провайдера
+    public String getStatus(){
+        return Status.getText().trim();
+    }
+
+    //Получение BIN контент-провайдера
+    public String getBIN(){
+        return BIN.getText().trim();
+    }
+
+
+    //Клик по кнопке Logout
+    public ContentProvider clickLogout() {
+        clickLogout.click();
+        return this;
+    }
+    //Повторный клик по кнопке Logout
+    public LoginPage clickLogoutSecond() {
+        clickLogout.click();
+        return new LoginPage(driver);
+    }
+
+
+
 
 }

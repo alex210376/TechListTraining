@@ -37,12 +37,15 @@ public class TestsContentProvider extends BaseTest {
 
 
         List<WebElement> elements = contentProvider.selectLines();   //Заносим в коллекцию выведенные записи
-
+        System.out.println(elements);
         int actualNumberOflines = elements.size();                  //Заносим в переменную actualNumberOflines количество реально выведенных записей
         int expectedNumberOflinesInt = Integer.parseInt (numberOflines);         //Приводим к типу int ожидаемое количество записей
 
         Assert.assertEquals(actualNumberOflines, expectedNumberOflinesInt);      //выполняем сравнение ожидаемого и реального количества записей
         System.out.println("Количество отображаемых строк: " + elements.size());
+
+        new Dashboard(driver)
+                .clickLogout().clickLogoutSecond(); //выходим из аккаунта
 
         sleep(3000);
 
@@ -68,10 +71,10 @@ public class TestsContentProvider extends BaseTest {
                 .clickID().clickID()            //двойной клик по ID
                 .clickStatus().clickStatus()    //двойной клик по статусу
                 .clickName().clickName()        //двойной клик по имени
-                .clickBIN().clickBIN();         //двойной клик по BIN
+                .clickBIN().clickBIN()        //двойной клик по BIN
+                .clickLogout().clickLogoutSecond();  //выходим из аккаунта
 
         sleep(3000);
-
     }
 
     //Проверка наличия полей ввода на форме редактирования
@@ -110,6 +113,7 @@ public class TestsContentProvider extends BaseTest {
         String comment = contentProviderEdit.getComment();   //Получаем имя поля "Комментарий" и сравниваем с сожидаемым
         Assert.assertEquals(comment, "Коментарий");
 
+
         sleep(3000);
     }
 
@@ -133,13 +137,14 @@ public class TestsContentProvider extends BaseTest {
         System.out.println("Количество записей до добавления: "+ numberOfRecordsBefore);   //выводим на экран количество строк
 
         new ContentProvider(driver)
-                .clickAddButton() //кликаем по кнопке добавления записи "Добавить"
-                .fillName("Test")   //вводим наименование контент-провайдера
+                .clickAddButton()             //кликаем по кнопке добавления записи "Добавить"
+                .fillName("Test")             //вводим наименование контент-провайдера
+                .selectStatus("Активный")   //выбираем статус контент-провайдера - активный/неактивный
                 .fillEmail("test@gmail.com")  //вводим электронный адрес
-                .fillPhone("0501234567")     //вводим телефон
-                .fillBIN("777")              //вводим BIN
-                .fillDateFrom("10.10.2020")  //вводим С даты
-                .fillDateTo("10.10.2030")    //вводим По дату
+                .fillPhone("0501234567")      //вводим телефон
+                .fillBIN("7777")               //вводим BIN
+                .fillDateFrom("10.10.2020")   //вводим С даты
+                .fillDateTo("10.10.2030")     //вводим По дату
                 .fillComment("Test Provider") //вводим комментарий
                 .clickSaveButton();           //кликаем по кнопке Сохранить
 
@@ -150,6 +155,9 @@ public class TestsContentProvider extends BaseTest {
         System.out.println("Количество записей после добавления: "+ numberOfRecordsAfter); //выводим на экран количество строк
 
         Assert.assertEquals(numberOfRecordsBefore, numberOfRecordsAfter-1); //выполняем сравнение количества записей до добавления и после
+
+        new ContentProvider(driver)
+                .clickLogout().clickLogoutSecond(); //выходим из аккаунта
 
         sleep(3000);
     }
@@ -187,6 +195,54 @@ public class TestsContentProvider extends BaseTest {
         System.out.println("Количество записей после удаления: "+ numberOfRecordsAfter); //выводим на экран количество строк
 
         Assert.assertEquals(numberOfRecordsBefore, numberOfRecordsAfter+1); //выполняем сравнение количества записей до удаления и после удаления + 1
+
+        new ContentProvider(driver)
+                .clickLogout().clickLogoutSecond(); //выходим из аккаунта
+
+        sleep(3000);
+    }
+
+    //Проверка формы редактирования на ввод новых значений и сохранение
+    @Test(enabled = true)
+    public void testEditFormInput() throws InterruptedException {
+        new LoginPage(driver)
+                .goToHome(baseUrl)      //открываем страницу
+                .fillUserName(login)    //вводим логин
+                .fillPassword(password) //вводим пароль
+                .clickLoginButton();    //кликаем по кнопке login
+
+        driver.manage().window().maximize();  //разворачиваем окно браузера на весь экран
+
+        new Dashboard(driver)
+                .clickContProv()    //кликаем по пункту меню "Контент-провайдер"
+                .clickEditButton(); //кликаем по пиктограмме редактирования
+
+        ContentProviderEdit contentProviderEdit = new ContentProviderEdit(driver);
+
+        String name = "Test EditForm";
+        String status = "Неактивный";
+        String bin = "7777";
+
+        new ContentProviderEdit(driver)
+                .fillName(name)             //вводим наименование контент-провайдера
+                .selectStatus(status)          //выбираем статус контент-провайдера - активный/неактивный
+                .fillBIN(bin)               //вводим BIN
+                .fillDateFrom("01.01.2019")   //вводим С даты
+                .fillDateTo("01.01.2029")     //вводим По дату
+                .fillComment("Проверка ввода данных на форме редактирования") //вводим комментарий
+                .clickSaveButton();           //кликаем по кнопке Сохранить
+
+
+        driver.navigate().refresh(); //обновляем страницу
+        ContentProvider contentProvider = new ContentProvider(driver);
+        String nameAfter = contentProvider.getName();    //получаем наименование контент-провайдера после редактирования
+        String statusAfter = contentProvider.getStatus();    //получаем статус контент-провайдера после редактирования
+        String binAfter = contentProvider.getBIN();    //получаем BIN контент-провайдера после редактирования
+
+        Assert.assertEquals(nameAfter, name);         //выполняем сравнение наименований контент-провайдера до и после редактирования
+        Assert.assertEquals(statusAfter, status);     //выполняем сравнение статусов контент-провайдера до и после редактирования
+        Assert.assertEquals(binAfter, bin);           //выполняем сравнение BIN контент-провайдера до и после редактирования
+
 
         sleep(3000);
     }

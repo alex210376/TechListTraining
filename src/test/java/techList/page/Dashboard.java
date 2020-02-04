@@ -10,6 +10,9 @@ public class Dashboard extends BasePage {
     @FindBy(xpath = "//a[text() ='Контент-провайдеры']")
     private WebElement clickContentProvider;
 
+    @FindBy(xpath = "//span[text()='Logout']")
+    private WebElement clickLogout;
+
     public Dashboard(WebDriver driver) {
         super(driver);
     }
@@ -18,6 +21,18 @@ public class Dashboard extends BasePage {
     public ContentProvider clickContProv() {
         clickContentProvider.click();
         return new ContentProvider(driver);
+    }
+
+
+    //Клик по кнопке Logout
+    public Dashboard clickLogout() {
+        clickLogout.click();
+        return this;
+    }
+    //Повторный клик по кнопке Logout
+    public LoginPage clickLogoutSecond() {
+        clickLogout.click();
+        return new LoginPage(driver);
     }
 }
 

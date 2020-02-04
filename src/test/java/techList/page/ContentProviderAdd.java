@@ -3,12 +3,16 @@ package techList.page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 import techList.core.BasePage;
 
 public class ContentProviderAdd extends BasePage {
 
     @FindBy(name = "name")
     private WebElement fieldName;
+
+    @FindBy(name = "status")
+    private WebElement fieldStatus;
 
     @FindBy(name = "email")
     private WebElement fieldEmail;
@@ -19,10 +23,10 @@ public class ContentProviderAdd extends BasePage {
     @FindBy(name = "bin")
     private WebElement fieldBIN;
 
-    @FindBy(name = "active_from")
+    @FindBy(xpath = "//input[@name='active_from']")
     private WebElement fieldActiveFrom;
 
-    @FindBy(name = "active_to")
+    @FindBy(xpath = "//input[@name='active_to']")
     private WebElement fieldActiveTo;
 
     @FindBy(name = "comment")
@@ -38,6 +42,13 @@ public class ContentProviderAdd extends BasePage {
     //Ввод названия
     public ContentProviderAdd fillName(String name){
         fillField(fieldName, name);
+        return this;
+    }
+
+    //Выбор статуса - активный/неактивный
+    public ContentProviderAdd selectStatus(String status){
+        Select select = new Select(fieldStatus);
+        select.selectByVisibleText(status);
         return this;
     }
 
