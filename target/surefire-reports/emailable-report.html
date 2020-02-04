@@ -9,17 +9,18 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">LoginTests</th></tr>
-<tr><td><a href="#t0">login firefox</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">65 604</td><td></td><td></td></tr>
+<tr><td><a href="#t0">login chrome</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">86 875</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">LoginTests</th></tr></tbody><tbody id="t0"><tr><th colspan="4">login firefox &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">techList.test.TestsContentProvider</td><td><a href="#m0">testAddLine</a></td><td rowspan="1">1580746173562</td><td rowspan="1">5658</td></tr><tr><th colspan="4">login firefox &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">techList.test.TestsContentProvider</td><td><a href="#m1">testDeleteLine</a></td><td rowspan="1">1580746185525</td><td rowspan="1">6044</td></tr><tr class="passedeven"><td><a href="#m2">testEditForm</a></td><td rowspan="1">1580746197729</td><td rowspan="1">5768</td></tr><tr class="passedeven"><td><a href="#m3">testLogin</a></td><td rowspan="1">1580746209944</td><td rowspan="1">5360</td></tr><tr class="passedeven"><td><a href="#m4">testSort</a></td><td rowspan="1">1580746221591</td><td rowspan="1">7841</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">LoginTests</th></tr></tbody><tbody id="t0"><tr><th colspan="4">login chrome &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">techList.test.TestsContentProvider</td><td><a href="#m0">testAddLine</a></td><td rowspan="1">1580825056296</td><td rowspan="1">13417</td></tr><tr class="failedeven"><td><a href="#m1">testDeleteLine</a></td><td rowspan="1">1580825075818</td><td rowspan="1">14137</td></tr><tr class="failedeven"><td><a href="#m2">testEditFormInput</a></td><td rowspan="1">1580825107077</td><td rowspan="1">4489</td></tr><tr><th colspan="4">login chrome &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">techList.test.TestsContentProvider</td><td><a href="#m3">testEditForm</a></td><td rowspan="1">1580825095848</td><td rowspan="1">5261</td></tr><tr class="passedeven"><td><a href="#m4">testLogin</a></td><td rowspan="1">1580825117405</td><td rowspan="1">5118</td></tr><tr class="passedeven"><td><a href="#m5">testSort</a></td><td rowspan="1">1580825128543</td><td rowspan="1">7581</td></tr></tbody>
 </table>
-<h2>login firefox</h2><h3 id="m0">techList.test.TestsContentProvider#testAddLine</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id=&apos;entTable_info&apos;]
+<h2>login chrome</h2><h3 id="m0">techList.test.TestsContentProvider#testAddLine</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;entTable_info&apos;]&quot;}
+  (Session info: chrome=79.0.3945.130)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.0.0-alpha-4&apos;, revision: &apos;c2d955b49e&apos;
 System info: host: &apos;OSTOVBENKO-WS&apos;, ip: &apos;10.4.30.97&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.2&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 348, moz:profile: C:\Users\ostovbenko.TELESEN..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b3ace3ef-6f0e-4a3a-9684-6278d709e726
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\OSTOVB~1.TEL\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:50049}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6bf7ab0b2e9d40c39cdb83180443cd6d
 *** Element info: {Using=xpath, value=//*[@id=&apos;entTable_info&apos;]}
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
@@ -34,13 +35,42 @@ Session ID: b3ace3ef-6f0e-4a3a-9684-6278d709e726
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
 	at com.sun.proxy.$Proxy14.getText(Unknown Source)
-	at techList.page.ContentProvider.getInfo(ContentProvider.java:130)
-	at techList.test.TestsContentProvider.testAddLine(TestsContentProvider.java:149)
+	at techList.page.ContentProvider.getInfo(ContentProvider.java:153)
+	at techList.test.TestsContentProvider.testAddLine(TestsContentProvider.java:165)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
 ... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">techList.test.TestsContentProvider#testDeleteLine</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">techList.test.TestsContentProvider#testEditForm</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">techList.test.TestsContentProvider#testLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">techList.test.TestsContentProvider#testSort</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">techList.test.TestsContentProvider#testDeleteLine</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&apos;Logout&apos;]&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-4&apos;, revision: &apos;c2d955b49e&apos;
+System info: host: &apos;OSTOVBENKO-WS&apos;, ip: &apos;10.4.30.97&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\OSTOVB~1.TEL\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:50163}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 219efda022e0f40e694cdfc4a2a87449
+*** Element info: {Using=xpath, value=//span[text()=&apos;Logout&apos;]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy14.click(Unknown Source)
+	at techList.page.ContentProvider.clickLogoutSecond(ContentProvider.java:180)
+	at techList.test.TestsContentProvider.testDeleteLine(TestsContentProvider.java:211)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">techList.test.TestsContentProvider#testEditFormInput</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Активный] but found [Не активный]
+	at techList.test.TestsContentProvider.testEditFormInput(TestsContentProvider.java:253)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">techList.test.TestsContentProvider#testEditForm</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">techList.test.TestsContentProvider#testLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">techList.test.TestsContentProvider#testSort</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

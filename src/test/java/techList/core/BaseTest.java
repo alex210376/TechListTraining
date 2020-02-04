@@ -43,6 +43,7 @@ public class BaseTest {
         }
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//        driver.manage().window().maximize(); //разворачиваем окно браузера на весь экран
     }
 
 

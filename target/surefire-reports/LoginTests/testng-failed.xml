@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [LoginTests]" guice-stage="DEVELOPMENT" verbose="0">
-  <test thread-count="5" name="login firefox(failed)" verbose="0">
-    <parameter name="browser" value="firefox"/>
+  <test thread-count="5" name="login chrome(failed)" verbose="0">
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="techList.test.TestsContentProvider">
         <methods>
           <include name="testAddLine"/>
+          <include name="testEditFormInput"/>
           <include name="setUp"/>
+          <include name="testDeleteLine"/>
           <include name="Down"/>
         </methods>
       </class> <!-- techList.test.TestsContentProvider -->
     </classes>
-  </test> <!-- login firefox(failed) -->
+  </test> <!-- login chrome(failed) -->
 </suite> <!-- Failed suite [LoginTests] -->

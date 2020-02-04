@@ -3,21 +3,21 @@
 
 <suite name="LoginTests">
 
-<!--      <test name="login chrome">-->
-<!--        <parameter name="browser" value="chrome"/>-->
-<!--        <classes>-->
-<!--            <class name="techList.test.TestsContentProvider" />-->
-<!--        </classes>-->
-<!--      </test>-->
-
-
-
-      <test name="login firefox">
-         <parameter name="browser" value="firefox"/>
-          <classes>
-              <class name="techList.test.TestsContentProvider" />
-          </classes>
+      <test name="login chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="techList.test.TestsContentProvider" />
+        </classes>
       </test>
+
+
+
+<!--      <test name="login firefox">-->
+<!--         <parameter name="browser" value="firefox"/>-->
+<!--          <classes>-->
+<!--              <class name="techList.test.TestsContentProvider" />-->
+<!--          </classes>-->
+<!--      </test>-->
 
 <!--      <test name="login opera">-->
 <!--        <parameter name="browser" value="opera"/>-->

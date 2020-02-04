@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import techList.core.BasePage;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ContentProvider extends BasePage {
@@ -67,96 +68,103 @@ public class ContentProvider extends BasePage {
         super(driver);
     }
 
+
     //Выбор количества отображаемых на экране записей
-    public ContentProvider selectTableLength(String number){
+    public ContentProvider selectTableLength(String number) {
         Select select = new Select(tableLength);
         select.selectByValue(number);
         return this;
     }
 
     //Запись имени страницы
-    public String selectPageName(){
+    public String selectPageName() {
         return pageName.getText().trim();
     }
 
-    //Запись в коллекцию всех отображаемых строк
-    public List<WebElement> selectLines(){
-        List<WebElement> elements = driver.findElements (By.xpath("//td[@class='sorting_1']"));
+    //Запись в коллекцию всех отображаемых на странице ID
+    public List<WebElement> selectLinesID() {
+        List<WebElement> elements = driver.findElements(By.xpath("//td[@class='sorting_1']"));
+        return elements;
+    }
+
+    //Запись в коллекцию всех отображаемых на странице названий
+    public List<WebElement> selectLinesNames() {
+        List<WebElement> elements = driver.findElements(By.xpath("//td[@class='text-primary']"));
         return elements;
     }
 
     //Клик по N для сортировки
-    public ContentProvider clickN(){
+    public ContentProvider clickN() {
         clickNElement.click();
         return this;
     }
 
     //Клик по ID для сортировки
-    public ContentProvider clickID(){
+    public ContentProvider clickID() {
         clickIDElement.click();
         return this;
     }
 
     //Клик по Статус для сортировки
-    public ContentProvider clickStatus(){
+    public ContentProvider clickStatus() {
         clickStatusElement.click();
         return this;
     }
 
     //Клик по Наименование для сортировки
-    public ContentProvider clickName(){
+    public ContentProvider clickName() {
         clickNameElement.click();
         return this;
     }
 
     //Клик по BIN для сортировки
-    public ContentProvider clickBIN(){
+    public ContentProvider clickBIN() {
         clickBINElement.click();
         return this;
     }
 
     //Клик по пиктограмме редактирования
-    public ContentProviderEdit clickEditButton(){
+    public ContentProviderEdit clickEditButton() {
         clickEdit.click();
         return new ContentProviderEdit(driver);
     }
 
     //Клик по пиктограмме удаления
-    public ContentProvider clickDeleteButton(){
+    public ContentProvider clickDeleteButton() {
         clickDelete.click();
         return this;
     }
 
     //Клик по кнопке подтверждения удаления
-    public ContentProvider clickConfirmDeleteButton(){
+    public ContentProvider clickConfirmDeleteButton() {
         clickConfirmDelete.click();
         return this;
     }
 
     //Клик по по кнопке "Добавить"
-    public ContentProviderAdd clickAddButton(){
+    public ContentProviderAdd clickAddButton() {
         clickAdd.click();
         return new ContentProviderAdd(driver);
     }
 
 
     //Чтение информации о количестве записей
-    public String getInfo(){
+    public String getInfo() {
         return infoLine.getText().trim();
     }
 
     //Получение имени контент-провайдера
-    public String getName(){
+    public String getName() {
         return Name.getText().trim();
     }
 
     //Получение статуса контент-провайдера
-    public String getStatus(){
+    public String getStatus() {
         return Status.getText().trim();
     }
 
     //Получение BIN контент-провайдера
-    public String getBIN(){
+    public String getBIN() {
         return BIN.getText().trim();
     }
 
@@ -166,13 +174,22 @@ public class ContentProvider extends BasePage {
         clickLogout.click();
         return this;
     }
+
     //Повторный клик по кнопке Logout
     public LoginPage clickLogoutSecond() {
         clickLogout.click();
         return new LoginPage(driver);
     }
 
+    public List<String> getElements(List<WebElement> elements) {
 
+        List<String> elementsList = new ArrayList<>();     //Создаем коллекцию, в которую будут помещены полученные элементы
 
+        for (int i = 0; i < elements.size(); i++)          //В цикле получаем из отдельных элементов текс из них и заносим в коллекцию
+            elementsList.add(elements.get(i).getText());
+
+        return elementsList;  //Возвращаем коллекцию с текстом элементов
+    }
 
 }
+

@@ -1,16 +1,34 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 66.141 s <<< FAILURE! - in TestSuite
-testAddLine(techList.test.TestsContentProvider)  Time elapsed: 5.669 s  <<< FAILURE!
+Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 87.515 s <<< FAILURE! - in TestSuite
+testAddLine(techList.test.TestsContentProvider)  Time elapsed: 13.43 s  <<< FAILURE!
 org.openqa.selenium.NoSuchElementException: 
-Unable to locate element: //*[@id='entTable_info']
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='entTable_info']"}
+  (Session info: chrome=79.0.3945.130)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.0.0-alpha-4', revision: 'c2d955b49e'
 System info: host: 'OSTOVBENKO-WS', ip: '10.4.30.97', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.2'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 348, moz:profile: C:\Users\ostovbenko.TELESEN..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b3ace3ef-6f0e-4a3a-9684-6278d709e726
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\OSTOVB~1.TEL\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:50049}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6bf7ab0b2e9d40c39cdb83180443cd6d
 *** Element info: {Using=xpath, value=//*[@id='entTable_info']}
-	at techList.test.TestsContentProvider.testAddLine(TestsContentProvider.java:149)
+	at techList.test.TestsContentProvider.testAddLine(TestsContentProvider.java:165)
+
+testDeleteLine(techList.test.TestsContentProvider)  Time elapsed: 14.136 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Logout']"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-4', revision: 'c2d955b49e'
+System info: host: 'OSTOVBENKO-WS', ip: '10.4.30.97', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\OSTOVB~1.TEL\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:50163}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 219efda022e0f40e694cdfc4a2a87449
+*** Element info: {Using=xpath, value=//span[text()='Logout']}
+	at techList.test.TestsContentProvider.testDeleteLine(TestsContentProvider.java:211)
+
+testEditFormInput(techList.test.TestsContentProvider)  Time elapsed: 4.49 s  <<< FAILURE!
+java.lang.AssertionError: expected [Активный] but found [Не активный]
+	at techList.test.TestsContentProvider.testEditFormInput(TestsContentProvider.java:253)
 

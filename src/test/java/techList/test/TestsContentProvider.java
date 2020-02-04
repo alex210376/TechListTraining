@@ -8,6 +8,10 @@ import techList.page.ContentProvider;
 import techList.page.ContentProviderEdit;
 import techList.page.Dashboard;
 import techList.page.LoginPage;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import static java.lang.Thread.sleep;
@@ -21,9 +25,8 @@ public class TestsContentProvider extends BaseTest {
                 .goToHome(baseUrl)      //открываем страницу
                 .fillUserName(login)    //вводим логин
                 .fillPassword(password) //вводим пароль
-                .clickLoginButton();    //кликаем по кнопке login
-
-        driver.manage().window().maximize(); //разворачиваем окно браузера на весь экран
+                .clickLoginButton()    //кликаем по кнопке login
+                .clickMenu();          //кликаем по пиктограмее Menu
 
         new Dashboard(driver)
                 .clickContProv();  //кликаем по пункту меню "Контент-провайдер"
@@ -36,16 +39,18 @@ public class TestsContentProvider extends BaseTest {
         contentProvider.selectTableLength(numberOflines);  //Выбираем количества отображаемых на экране записей (из common.properties)
 
 
-        List<WebElement> elements = contentProvider.selectLines();   //Заносим в коллекцию выведенные записи
-        System.out.println(elements);
+        List<WebElement> elements = contentProvider.selectLinesID();   //Заносим в коллекцию полученные элементы с идентификаторами
+
+        System.out.println(contentProvider.getElements(elements));     //выводим полученные ID на экран
+
         int actualNumberOflines = elements.size();                  //Заносим в переменную actualNumberOflines количество реально выведенных записей
         int expectedNumberOflinesInt = Integer.parseInt (numberOflines);         //Приводим к типу int ожидаемое количество записей
 
         Assert.assertEquals(actualNumberOflines, expectedNumberOflinesInt);      //выполняем сравнение ожидаемого и реального количества записей
         System.out.println("Количество отображаемых строк: " + elements.size());
 
-        new Dashboard(driver)
-                .clickLogout().clickLogoutSecond(); //выходим из аккаунта
+//        new ContentProvider(driver)
+//                .clickLogout().clickLogoutSecond(); //выходим из аккаунта
 
         sleep(3000);
 
@@ -58,21 +63,30 @@ public class TestsContentProvider extends BaseTest {
                 .goToHome(baseUrl)      //открываем страницу
                 .fillUserName(login)    //вводим логин
                 .fillPassword(password) //вводим пароль
-                .clickLoginButton();    //кликаем по кнопке login
-
-        driver.manage().window().maximize(); //разворачиваем окно браузера на весь экран
+                .clickLoginButton()    //кликаем по кнопке login
+                .clickMenu();          //кликаем по пиктограмее Menu
 
         new Dashboard(driver)
                 .clickContProv();   //кликаем по пункту меню "Контент-провайдер"
 
-        new ContentProvider(driver)
+        ContentProvider contentProvider = new ContentProvider(driver)
                 .selectTableLength(numberOflines)
                 .clickN().clickN()              //двойной клик по "#"
                 .clickID().clickID()            //двойной клик по ID
                 .clickStatus().clickStatus()    //двойной клик по статусу
-                .clickName().clickName()        //двойной клик по имени
-                .clickBIN().clickBIN()        //двойной клик по BIN
-                .clickLogout().clickLogoutSecond();  //выходим из аккаунта
+                .clickName().clickName()       //двойной клик по имени
+                .clickBIN().clickBIN();         //двойной клик по BIN
+
+
+        List<WebElement> elements = contentProvider.selectLinesNames();   //Заносим в коллекцию полученные элементы с названиями
+
+        List <String> elementsName = contentProvider.getElements(elements);  //Вызываем метод getElements для получения коллекции с названиями
+        System.out.println(elementsName);     //выводим полученные названия на экран
+        Collections.sort(elementsName);       //выполняем сортировку полученных значений
+        System.out.println(elementsName);     //выводим полученные названия на экран после сортировки
+
+
+        contentProvider.clickLogout().clickLogoutSecond();  //выходим из аккаунта
 
         sleep(3000);
     }
@@ -84,9 +98,8 @@ public class TestsContentProvider extends BaseTest {
                 .goToHome(baseUrl)      //открываем страницу
                 .fillUserName(login)    //вводим логин
                 .fillPassword(password) //вводим пароль
-                .clickLoginButton();    //кликаем по кнопке login
-
-        driver.manage().window().maximize();  //разворачиваем окно браузера на весь экран
+                .clickLoginButton()     //кликаем по кнопке login
+                .clickMenu();           //кликаем по пиктограмее Menu
 
         new Dashboard(driver)
                 .clickContProv()    //кликаем по пункту меню "Контент-провайдер"
@@ -124,10 +137,10 @@ public class TestsContentProvider extends BaseTest {
                 .goToHome(baseUrl)      //открываем страницу
                 .fillUserName(login)    //вводим логин
                 .fillPassword(password) //вводим пароль
-                .clickLoginButton();    //кликаем по кнопке login
+                .clickLoginButton()     //кликаем по кнопке login
+                .clickMenu();           //кликаем по пиктограмее Menu
 
         driver.manage().window().maximize(); //разворачиваем окно браузера на весь экран
-
         new Dashboard(driver)
                 .clickContProv();  //кликаем по пункту меню "Контент-провайдер"
 
@@ -171,9 +184,8 @@ public class TestsContentProvider extends BaseTest {
                 .goToHome(baseUrl)      //открываем страницу
                 .fillUserName(login)    //вводим логин
                 .fillPassword(password) //вводим пароль
-                .clickLoginButton();    //кликаем по кнопке login
-
-        driver.manage().window().maximize(); //разворачиваем окно браузера на весь экран
+                .clickLoginButton()     //кликаем по кнопке login
+                .clickMenu();           //кликаем по пиктограмее Menu
 
         new Dashboard(driver)
                 .clickContProv();  //кликаем по пункту меню "Контент-провайдер"
@@ -209,9 +221,10 @@ public class TestsContentProvider extends BaseTest {
                 .goToHome(baseUrl)      //открываем страницу
                 .fillUserName(login)    //вводим логин
                 .fillPassword(password) //вводим пароль
-                .clickLoginButton();    //кликаем по кнопке login
+                .clickLoginButton()     //кликаем по кнопке login
+                .clickMenu();           //кликаем по пиктограмее Menu
+        driver.manage().window().maximize(); //разворачиваем окно браузера на весь экран
 
-        driver.manage().window().maximize();  //разворачиваем окно браузера на весь экран
 
         new Dashboard(driver)
                 .clickContProv()    //кликаем по пункту меню "Контент-провайдер"
@@ -220,7 +233,7 @@ public class TestsContentProvider extends BaseTest {
         ContentProviderEdit contentProviderEdit = new ContentProviderEdit(driver);
 
         String name = "Test EditForm";
-        String status = "Неактивный";
+        String status = "Активный";
         String bin = "7777";
 
         new ContentProviderEdit(driver)
@@ -243,8 +256,6 @@ public class TestsContentProvider extends BaseTest {
         Assert.assertEquals(statusAfter, status);     //выполняем сравнение статусов контент-провайдера до и после редактирования
         Assert.assertEquals(binAfter, bin);           //выполняем сравнение BIN контент-провайдера до и после редактирования
 
-
         sleep(3000);
     }
-
 }

@@ -7,6 +7,9 @@ import techList.core.BasePage;
 
 public class Dashboard extends BasePage {
 
+    @FindBy(xpath = "//a[@id='toggle-btn']")
+    private WebElement menu;
+
     @FindBy(xpath = "//a[text() ='Контент-провайдеры']")
     private WebElement clickContentProvider;
 
@@ -15,6 +18,12 @@ public class Dashboard extends BasePage {
 
     public Dashboard(WebDriver driver) {
         super(driver);
+    }
+
+    //Клик по пиктограмме Меню
+    public Dashboard clickMenu(){
+        menu.click();
+        return this;
     }
 
     //Клик по пункту меню Контент-провайдеры

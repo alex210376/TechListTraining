@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="66.141" tests="5" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="87.515" tests="6" errors="0" skipped="0" failures="3">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\OSTOVB~1.TEL\AppData\Local\Temp\surefire9192577239791136681\surefirebooter992223227752545676.jar C:\Users\ostovbenko.TELESENS\AppData\Local\Temp\surefire9192577239791136681 2020-02-03T18-09-24_363-jvmRun1 surefire1232725200174216502tmp surefire_01287747315123852528tmp"/>
+    <property name="sun.java.command" value="C:\Users\OSTOVB~1.TEL\AppData\Local\Temp\surefire13188253125975173072\surefirebooter12303451493019962369.jar C:\Users\ostovbenko.TELESENS\AppData\Local\Temp\surefire13188253125975173072 2020-02-04T16-04-08_112-jvmRun1 surefire4855141530337611481tmp surefire_05803364919839984893tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\Stovbenko\Work\QA\TechList Training\target\test-classes;D:\Stovbenko\Work\QA\TechList Training\target\classes;C:\Users\ostovbenko.TELESENS\.m2\repository\org\seleniumhq\selenium\selenium-java\4.0.0-alpha-4\selenium-java-4.0.0-alpha-4.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\seleniumhq\selenium\selenium-api\4.0.0-alpha-4\selenium-api-4.0.0-alpha-4.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.0.0-alpha-4\selenium-chrome-driver-4.0.0-alpha-4.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\com\google\auto\service\auto-service-annotations\1.0-rc6\auto-service-annotations-1.0-rc6.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\com\google\auto\service\auto-service\1.0-rc6\auto-service-1.0-rc6.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\com\google\auto\auto-common\0.10\auto-common-0.10.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\com\google\guava\guava\28.2-jre\guava-28.2-jre.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\checkerframework\checker-qual\2.10.0\checker-qual-2.10.0.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\com\google\errorprone\error_prone_annotations\2.3.4\error_prone_annotations-2.3.4.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.0.0-alpha-4\selenium-chromium-driver-4.0.0-alpha-4.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\seleniumhq\selenium\selenium-devtools\4.0.0-alpha-4\selenium-devtools-4.0.0-alpha-4.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\seleniumhq\selenium\selenium-http\4.0.0-alpha-4\selenium-http-4.0.0-alpha-4.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\seleniumhq\selenium\selenium-json\4.0.0-alpha-4\selenium-json-4.0.0-alpha-4.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.0.0-alpha-4\selenium-edge-driver-4.0.0-alpha-4.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\seleniumhq\selenium\selenium-edgehtml-driver\4.0.0-alpha-4\selenium-edgehtml-driver-4.0.0-alpha-4.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.0.0-alpha-4\selenium-firefox-driver-4.0.0-alpha-4.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\seleniumhq\selenium\selenium-firefox-xpi-driver\4.0.0-alpha-4\selenium-firefox-xpi-driver-4.0.0-alpha-4.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.0.0-alpha-4\selenium-ie-driver-4.0.0-alpha-4.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\4.0.0-alpha-4\selenium-opera-driver-4.0.0-alpha-4.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.0.0-alpha-4\selenium-remote-driver-4.0.0-alpha-4.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\com\squareup\okhttp3\okhttp\4.3.0\okhttp-4.3.0.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\com\squareup\okio\okio\2.4.1\okio-2.4.1.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-common\1.3.50\kotlin-stdlib-common-1.3.50.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\1.3.61\kotlin-stdlib-1.3.61.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\com\typesafe\netty\netty-reactive-streams\2.0.4\netty-reactive-streams-2.0.4.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\io\netty\netty-handler\4.1.43.Final\netty-handler-4.1.43.Final.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\io\netty\netty-common\4.1.43.Final\netty-common-4.1.43.Final.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\io\netty\netty-buffer\4.1.43.Final\netty-buffer-4.1.43.Final.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\io\netty\netty-transport\4.1.43.Final\netty-transport-4.1.43.Final.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\io\netty\netty-codec\4.1.43.Final\netty-codec-4.1.43.Final.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\io\opentracing\opentracing-api\0.33.0\opentracing-api-0.33.0.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\net\bytebuddy\byte-buddy\1.10.6\byte-buddy-1.10.6.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\asynchttpclient\async-http-client\2.10.4\async-http-client-2.10.4.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\asynchttpclient\async-http-client-netty-utils\2.10.4\async-http-client-netty-utils-2.10.4.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\io\netty\netty-codec-http\4.1.42.Final\netty-codec-http-4.1.42.Final.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\io\netty\netty-codec-socks\4.1.42.Final\netty-codec-socks-4.1.42.Final.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\io\netty\netty-handler-proxy\4.1.42.Final\netty-handler-proxy-4.1.42.Final.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\io\netty\netty-transport-native-epoll\4.1.42.Final\netty-transport-native-epoll-4.1.42.Final-linux-x86_64.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.42.Final\netty-transport-native-unix-common-4.1.42.Final.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.42.Final\netty-transport-native-kqueue-4.1.42.Final-osx-x86_64.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\io\netty\netty-resolver-dns\4.1.42.Final\netty-resolver-dns-4.1.42.Final.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\io\netty\netty-resolver\4.1.42.Final\netty-resolver-4.1.42.Final.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\io\netty\netty-codec-dns\4.1.42.Final\netty-codec-dns-4.1.42.Final.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\slf4j\slf4j-api\1.7.26\slf4j-api-1.7.26.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\com\sun\activation\javax.activation\1.2.0\javax.activation-1.2.0.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.0.0-alpha-4\selenium-safari-driver-4.0.0-alpha-4.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\seleniumhq\selenium\selenium-support\4.0.0-alpha-4\selenium-support-4.0.0-alpha-4.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\testng\testng\7.0.0\testng-7.0.0.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\apache\maven\surefire\surefire-testng-utils\2.21.0\surefire-testng-utils-2.21.0.jar;C:\Users\ostovbenko.TELESENS\.m2\repository\org\apache\maven\surefire\surefire-grouper\2.21.0\surefire-grouper-2.21.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -34,7 +34,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\OSTOVB~1.TEL\AppData\Local\Temp\surefire9192577239791136681\surefirebooter992223227752545676.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\OSTOVB~1.TEL\AppData\Local\Temp\surefire13188253125975173072\surefirebooter12303451493019962369.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.2+9-LTS"/>
@@ -56,47 +56,76 @@
     <property name="user.language.format" value="uk"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk-11.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Oracle\product\11.2.0\client_1\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\Telesens Shared\;C:\Program Files\TortoiseSVN\bin;C:\Users\ostovbenko.TELESENS\AppData\Local\Microsoft\WindowsApps;C:\adb;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;%JAVA_HOME%\bin;C:\Program Files\Git\cmd;C:\Users\ostovbenko.TELESENS\AppData\Local\Microsoft\WindowsApps;C:\Users\ostovbenko.TELESENS\AppData\Local\atom\bin;C:\Users\ostovbenko.TELESENS\AppData\Local\Microsoft\WindowsApps;D:\app\maven\apache-maven-3.6.3\bin;C:\Program Files\Java\jdk-11.0.2\bin;;."/>
+    <property name="idea.version2019.3.2" value="true"/>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="java.vm.info" value="mixed mode"/>
     <property name="java.vm.version" value="11.0.2+9-LTS"/>
-    <property name="idea.version2019.3" value="true"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="testAddLine" classname="techList.test.TestsContentProvider" time="5.669">
-    <failure message="Unable to locate element: //*[@id=&apos;entTable_info&apos;]&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: &apos;4.0.0-alpha-4&apos;, revision: &apos;c2d955b49e&apos;&#10;System info: host: &apos;OSTOVBENKO-WS&apos;, ip: &apos;10.4.30.97&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.2&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 348, moz:profile: C:\Users\ostovbenko.TELESEN..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: b3ace3ef-6f0e-4a3a-9684-6278d709e726&#10;*** Element info: {Using=xpath, value=//*[@id=&apos;entTable_info&apos;]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
-Unable to locate element: //*[@id='entTable_info']
+  <testcase name="testAddLine" classname="techList.test.TestsContentProvider" time="13.43">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;entTable_info&apos;]&quot;}&#10;  (Session info: chrome=79.0.3945.130)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: &apos;4.0.0-alpha-4&apos;, revision: &apos;c2d955b49e&apos;&#10;System info: host: &apos;OSTOVBENKO-WS&apos;, ip: &apos;10.4.30.97&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.2&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\OSTOVB~1.TEL\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:50049}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: 6bf7ab0b2e9d40c39cdb83180443cd6d&#10;*** Element info: {Using=xpath, value=//*[@id=&apos;entTable_info&apos;]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='entTable_info']"}
+  (Session info: chrome=79.0.3945.130)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.0.0-alpha-4', revision: 'c2d955b49e'
 System info: host: 'OSTOVBENKO-WS', ip: '10.4.30.97', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.2'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 348, moz:profile: C:\Users\ostovbenko.TELESEN..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b3ace3ef-6f0e-4a3a-9684-6278d709e726
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\OSTOVB~1.TEL\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:50049}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6bf7ab0b2e9d40c39cdb83180443cd6d
 *** Element info: {Using=xpath, value=//*[@id='entTable_info']}
-	at techList.test.TestsContentProvider.testAddLine(TestsContentProvider.java:149)
+	at techList.test.TestsContentProvider.testAddLine(TestsContentProvider.java:165)
 </failure>
-    <system-out><![CDATA[Количество записей до добавления: 169
+    <system-out><![CDATA[Количество записей до добавления: 172
 ]]></system-out>
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-1580746167772	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\OSTOVB~1.TEL\\AppData\\Local\\Temp\\rust_mozprofileALZ37Y"
-1580746170544	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
-1580746170672	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
-1580746170672	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
-1580746170672	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
-1580746170672	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
-JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-1580746172903	Marionette	INFO	Listening on port 57863
-1580746173423	Marionette	WARN	TLS certificate errors will be ignored for this session
-лют. 03, 2020 6:09:33 ПП org.openqa.selenium.remote.ProtocolHandshake createSession
+Starting ChromeDriver 79.0.3945.36 (3582db32b33893869b8c1339e8f4d9ed1816f143-refs/branch-heads/3945@{#614}) on port 29401
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1580825054.137][WARNING]: Timed out connecting to Chrome, retrying...
+лют. 04, 2020 4:04:16 ПП org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
 ]]></system-err>
   </testcase>
-  <testcase name="testDeleteLine" classname="techList.test.TestsContentProvider" time="6.044"/>
-  <testcase name="testEditForm" classname="techList.test.TestsContentProvider" time="5.767"/>
-  <testcase name="testLogin" classname="techList.test.TestsContentProvider" time="5.357"/>
-  <testcase name="testSort" classname="techList.test.TestsContentProvider" time="7.837"/>
+  <testcase name="testDeleteLine" classname="techList.test.TestsContentProvider" time="14.136">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&apos;Logout&apos;]&quot;}&#10;  (Session info: chrome=79.0.3945.130)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: &apos;4.0.0-alpha-4&apos;, revision: &apos;c2d955b49e&apos;&#10;System info: host: &apos;OSTOVBENKO-WS&apos;, ip: &apos;10.4.30.97&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.2&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\OSTOVB~1.TEL\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:50163}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: 219efda022e0f40e694cdfc4a2a87449&#10;*** Element info: {Using=xpath, value=//span[text()=&apos;Logout&apos;]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Logout']"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-4', revision: 'c2d955b49e'
+System info: host: 'OSTOVBENKO-WS', ip: '10.4.30.97', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\OSTOVB~1.TEL\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:50163}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 219efda022e0f40e694cdfc4a2a87449
+*** Element info: {Using=xpath, value=//span[text()='Logout']}
+	at techList.test.TestsContentProvider.testDeleteLine(TestsContentProvider.java:211)
+</failure>
+    <system-out><![CDATA[Количество записей до удаления: 172
+Количество записей после удаления: 171
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 79.0.3945.36 (3582db32b33893869b8c1339e8f4d9ed1816f143-refs/branch-heads/3945@{#614}) on port 12910
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1580825073.765][WARNING]: Timed out connecting to Chrome, retrying...
+лют. 04, 2020 4:04:35 ПП org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testEditForm" classname="techList.test.TestsContentProvider" time="5.261"/>
+  <testcase name="testEditFormInput" classname="techList.test.TestsContentProvider" time="4.49">
+    <failure message="expected [Активный] but found [Не активный]" type="java.lang.AssertionError">java.lang.AssertionError: expected [Активный] but found [Не активный]
+	at techList.test.TestsContentProvider.testEditFormInput(TestsContentProvider.java:253)
+</failure>
+    <system-err><![CDATA[Starting ChromeDriver 79.0.3945.36 (3582db32b33893869b8c1339e8f4d9ed1816f143-refs/branch-heads/3945@{#614}) on port 12719
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1580825105.015][WARNING]: Timed out connecting to Chrome, retrying...
+лют. 04, 2020 4:05:07 ПП org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testLogin" classname="techList.test.TestsContentProvider" time="5.117"/>
+  <testcase name="testSort" classname="techList.test.TestsContentProvider" time="7.581"/>
 </testsuite>
